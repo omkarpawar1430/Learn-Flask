@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Mall - Bill</title>
+</head>
+<body>
+    <h1>My Mall - Bill</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+                <tr>
+                    <td>{{ item['item'] }}</td>
+                    <td>{{ item['price'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br><br>
+    <table>
+        <tr>
+            <td>Total Bill:</td>
+            <td>{{ total_bill }}</td>
+        </tr>
+        <tr>
+            <td>Discount:</td>
+            <td>{{ discount_percentage }}%</td>
+        </tr>
+        <tr>
+            <td>Bill After Discount:</td>
+            <td>{{ final_amount }}</td>
+        </tr>
+    </table>
+</body>
+</html>
